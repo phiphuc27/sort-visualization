@@ -13,15 +13,7 @@ body {
 	padding: 0 6em;
 	width: 100%;
 	height: 10vh;
-	background: linear-gradient(
-		30deg,
-		#3da4ab 0%,
-		#2496b9 16.67%,
-		#4584bc 33.33%,
-		#716daf 50%,
-		#91538f 66.67%,
-		#9e3b62 100%
-	);
+	background: linear-gradient(30deg, #3da4ab 0%, #9e3b62 100%);
 	color: white;
 }
 
