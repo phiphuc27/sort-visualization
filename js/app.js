@@ -42,7 +42,7 @@ const generateArray = () => {
 };
 
 const swap = async (arr, left, right) => {
-	await sleep(1 + Math.floor(((500 - barCount) * 5) / 100));
+	await sleep(1 + ((500 - barCount) * 1) / 100);
 
 	let tmp = arr[left].value;
 	arr[left].value = arr[right].value;
@@ -136,13 +136,7 @@ const mergeSortHelper = async (mainArray, startIdx, endIdx, auxiliaryArray) => {
 	await merge(mainArray, startIdx, middleIdx, endIdx, auxiliaryArray);
 };
 
-const merge = async (
-	mainArray,
-	startIdx,
-	middleIdx,
-	endIdx,
-	auxiliaryArray
-) => {
+const merge = async (mainArray, startIdx, middleIdx, endIdx, auxiliaryArray) => {
 	let k = startIdx;
 	let i = startIdx;
 	let j = middleIdx + 1;
@@ -152,7 +146,7 @@ const merge = async (
 		if (auxiliaryArray[i].value <= auxiliaryArray[j].value) {
 			mainArray[k].color = swapColor;
 
-			await sleep(1 + Math.floor(((500 - barCount) * 5) / 100));
+			await sleep(1 + ((500 - barCount) * 1) / 100);
 
 			mainArray[k].color = barColor;
 
@@ -163,7 +157,7 @@ const merge = async (
 		} else {
 			mainArray[k].color = swapColor;
 
-			await sleep(1 + Math.floor(((500 - barCount) * 5) / 100));
+			await sleep(1 + ((500 - barCount) * 1) / 100);
 
 			mainArray[k].color = barColor;
 
@@ -176,7 +170,7 @@ const merge = async (
 	while (i <= middleIdx) {
 		mainArray[k].color = swapColor;
 
-		await sleep(1 + Math.floor(((500 - barCount) * 5) / 100));
+		await sleep(1 + ((500 - barCount) * 1) / 100);
 
 		mainArray[k].color = barColor;
 
@@ -188,7 +182,7 @@ const merge = async (
 	while (j <= endIdx) {
 		mainArray[k].color = swapColor;
 
-		await sleep(1 + Math.floor(((500 - barCount) * 5) / 100));
+		await sleep(1 + ((500 - barCount) * 1) / 100);
 
 		mainArray[k].color = barColor;
 
@@ -209,7 +203,7 @@ const selectionSort = async arr => {
 		minIdx = i;
 		for (let j = i + 1; j < arr.length; j++) {
 			arr[j].color = swapColor;
-			await sleep(1 + Math.floor(((500 - barCount) * 1) / 100));
+			await sleep(1 + ((500 - barCount) * 1) / 100);
 			if (arr[j].value <= arr[minIdx].value) {
 				arr[j].color = barColor;
 				arr[minIdx].color = barColor;
